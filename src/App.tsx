@@ -10,6 +10,9 @@ import Navbar from "./components/main/Navbar";
 import Footer from "./components/main/Footer";
 import Menu from "./components/main/Menu";
 import Login from "./pages/Login";
+import NotFound from "./pages/NotFound";
+import Product from "./pages/Product";
+import User from "./pages/User";
 function App() {
 
   const Layout = () =>{
@@ -43,11 +46,21 @@ function App() {
         {
           path :"/products",
           element:<Products />
+        },{
+          path :"/users/:id",
+          element:<User/>
+        },{
+          path :"/products/:id",
+          element:<Product/>
         }]
       ,
     },{
       path:"/login",
       element:<Login/>
+    },
+    {
+      path:"*",
+      element:<NotFound />
     }
   ]);
 

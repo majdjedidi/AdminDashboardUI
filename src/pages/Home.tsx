@@ -7,7 +7,7 @@ import { chartBoxUser,chartBoxConversion,chartBoxRevenue,chartBoxProduct, barCha
 const Home = () => {
   const boxStyle :string = "p-5 rounded-[10px] border-2 border-soft"
   return (
-    <div className="grid gap-5 grid-cols-4 auto-rows-180 bg-b">
+    <div className="grid gap-5 grid-cols-4 auto-rows-180">
       <div className={`${boxStyle} col-span-1 row-span-3`}> <TopBox /> </div>
       <div className={boxStyle}><ChartBox {...chartBoxUser}/></div>
       <div className={boxStyle}><ChartBox {...chartBoxProduct} /></div>

@@ -15,6 +15,7 @@ export default {
           softtxt: '#ddd',
           darktxt: '#2a3447',
           modal :'rgba(0,0,0,0.725)',
+          tomato :'#f45b69'
       },
       gridAutoRows: {
         '180': 'minmax(180px, auto)',
