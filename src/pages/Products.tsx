@@ -3,7 +3,7 @@ import { useState } from "react";
 import DataTable from "../components/Tables/DataTable";
 import Add from "../components/Tables/Add";
 import { GridColDef } from "@mui/x-data-grid";
-import { products } from "../../data";
+import { products } from "../data";
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 90 },
   {
@@ -56,12 +56,12 @@ const Products = () => {
   return (
     <div>
       <div className="flex items-center gap-5 mb-5">
-        <h1 className="text-4xl font-bold">Users</h1>
-        <button className="p-1 cursor-pointer bg-softtxt text-darktxt rounded-md font-medium" onClick={() => setOpen(true)}>Add New User</button>
+        <h1 className="text-4xl font-bold">Products</h1>
+        <button className="p-1 cursor-pointer bg-softtxt text-darktxt rounded-md font-medium" onClick={() => setOpen(true)}>Add New Product</button>
       </div>
-      <DataTable slug="users" columns={columns} rows={userRows} />
+      <DataTable slug="products" columns={columns} rows={products} />
    
-      {open && <Add slug="user" columns={columns} setOpen={setOpen} />}
+      {open && <Add slug="product" columns={columns} setOpen={setOpen} />}
     </div>
   )
 }
