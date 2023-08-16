@@ -13,9 +13,7 @@ import {
   
   const DataTable = (props: Props) => {
   
-    const handleDelete = (id: number) => {
-
-    };
+   
   
     const actionColumn: GridColDef = {
       field: "action",
@@ -27,7 +25,7 @@ import {
             <Link to={`/${props.slug}/${params.row.id}`}>
               <img src="/view.svg" alt="" className="w-5 h-5 cursor-pointer"/>
             </Link>
-            <div className="delete" onClick={() => handleDelete(params.row.id)}>
+            <div>
               <img src="/delete.svg" alt="" className="w-5 h-5 cursor-pointer"/>
             </div>
           </div>
